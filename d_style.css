@@ -1,66 +1,47 @@
-.download-page {
-  background: linear-gradient(to right, #f7f9fc, #e6f0ff);
-  color: #222;
+body {
   font-family: 'Segoe UI', sans-serif;
-  padding: 40px 20px;
-  min-height: 100vh;
+  background-color: #f4f9ff;
+  margin: 0;
 }
-
-.download-header {
+.hero {
+  background: linear-gradient(to right, #dbefff, #f0f6fc);
   text-align: center;
-  margin-bottom: 30px;
+  padding: 40px 20px;
 }
-
-.download-header h1 {
-  font-size: 2.5rem;
-  color: #345d9d;
-  margin-bottom: 10px;
+.hero h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #3367d6;
 }
-
-.download-header p {
-  font-size: 1.1rem;
-  color: #555;
+.download-list {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
 }
-
 .download-list ul {
   list-style: none;
   padding: 0;
-  max-width: 600px;
-  margin: 0 auto 40px auto;
 }
-
 .download-list li {
-  margin: 15px 0;
-  padding: 15px;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: background 0.3s;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-
-.download-list li:hover {
-  background: #f0f7ff;
-}
-
 .download-list a {
   text-decoration: none;
-  color: #1d3b75;
-  font-weight: 600;
+  color: #224b7a;
 }
-
-.back-home {
-  text-align: center;
-}
-
-.back-btn {
+.home-btn {
+  display: inline-block;
+  margin-top: 30px;
   padding: 10px 20px;
-  background: #345d9d;
-  color: #fff;
+  background-color: #3367d6;
+  color: #fffff;
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s;
 }
-
-.back-btn:hover {
-  background: #274b80;
+.home-btn a{
+color: white;
 }
