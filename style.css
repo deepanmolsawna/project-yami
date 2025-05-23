@@ -1,111 +1,120 @@
-/* Base Reset */
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f6fb;
+  color: #222;
+}
+.hero {
+  background: linear-gradient(to right, #d4e7f5, #eaeef7);
+  padding: 40px 20px;
+  text-align: center;
+}
+.hero h1 {
+  margin: 0;
+  font-size: 42px;
+  color: #224B7A;
+}
+.hero p {
+  color: #333;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #f0f7ff, #ffffff);
-  color: #2e3a59;
-  line-height: 1.6;
-  position: relative;
-  overflow-x: hidden;
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0 20px;
+  color: #2a4563;
+}
+
+
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px;
+}
+.screenshot-grid img {
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
   padding: 20px;
 }
-
-/* Background SVG FIX */
-.background-svg {
-  position: fixed;
-  top: -100px;
-  left: -100px;
-  z-index: -10;
-  opacity: 0.15;
-  width: 600px;
-  height: 600px;
-  pointer-events: none;
+.feature-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 16px;
 }
 
-/* Header */
-header {
+.download-section {
   text-align: center;
-  margin-bottom: 40px;
+  margin: 40px 0;
+}
+.download-btn {
+  background-color: #3367d6;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
-header h1 {
-  font-size: 2.8rem;
-  color: #1f3c88;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #5e6d88;
-}
-
-/* Hero Section */
-.hero {
+.credits {
   text-align: center;
-  margin-bottom: 30px;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* 💡 this adds space between cards */
 }
 
-.hero img {
-  max-width: 100%;
+.credit-card {
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 15px 25px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+.credits-heading {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.download-btn {
-  display: inline-block;
-  background-color: #1f72c1;
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  font-weight: bold;
+.credit-card h3 {
+  margin-top: 0;
+  color: #224B7A;
+
+}
+.credit-btn {
+  background-color: #0088cc;
+  color: white;
+  padding: 6px 16px;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-}
-
-.download-btn:hover {
-  background-color: #155aa3;
-  transform: translateY(-2px);
-}
-
-.screenshot-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  justify-items: center;
-}
-
-.screenshot-img {
-  width: 100%;
-  max-width: 220px; /* max width per screenshot */
-  aspect-ratio: 9 / 19.5; /* exact ratio for your screenshots */
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.screenshot-img:hover {
-  transform: scale(1.03);
-}
-
-
-
-
-.download-wrapper {
-  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
   margin-top: 10px;
 }
+.credits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
 
-/* Features Section */
 .features {
   text-align: center;
   padding: 20px 0;
@@ -130,55 +139,14 @@ header p {
 }
 
 .card {
-  background-color: #ffffff;
-  border-left: 6px solid #1f72c1;
+  background: #fff;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  
 }
 
 .card h3 {
   color: #1f3c88;
   margin-bottom: 10px;
-}
-
-/* Feature List Section */
-.user-features {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 30px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-  text-align: center;
-}
-
-.user-features h2 {
-  margin-bottom: 20px;
-  color: #1f3c88;
-}
-
-.user-features ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-  text-align: left;
-  display: inline-block;
-}
-
-.user-features li {
-  background: #eaf1f8;
-  color: #2e3a59;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-/* Footer */
-footer {
-  margin-top: 60px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #8695a6;
 }
